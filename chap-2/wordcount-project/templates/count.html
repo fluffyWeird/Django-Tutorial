@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Counting</h1>
+   <a href="{% url 'index'%}">back Home</a>
+   <h1>you had {{count}} words</h1> 
+   <h2>Original Text</h2>
+    {{fulltext}}
+    <h2>List of word</h2>
+    {{wordanalyser}}
+    {% for key, value in wordanalyser.items %}
+    <li>{{ key }}: {{ value }}</li>
+{% endfor %}
+
+</body>
+</html>

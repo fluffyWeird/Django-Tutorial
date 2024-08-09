@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+</head>
+<body>
+    <button type="button" onclick="location.href='{% url 'index' %}'">HOME</button>
+   <h1>You have {{count}} words</h1>
+
+   <h2>the words are</h2>
+   <ul> 
+    {%for key,value in wordDictionary.items%}
+    <li>{{key}} - {{value}}</li>
+    {%endfor%}
+    </ul>
+</body>
+</html>
